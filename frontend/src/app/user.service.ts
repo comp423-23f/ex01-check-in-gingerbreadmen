@@ -15,4 +15,17 @@ export class UserService {
     return this.users;
   }
   constructor() { }
+
+  getUserFromPid(enteredPid: String){
+
+    for(let i in this.users){
+      if(this.users[i].pid === enteredPid){
+        return "thank you " + this.users[i].firstName + " " + this.users[i].lastName + "!";
+        
+      }
+    }
+    return "A student matching the PID could not be found";
+  }
+    
+
 }

@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule} from '@angular/forms';
 import { StatsComponent } from './stats/stats.component';
+import { CheckinComponent } from './checkin/checkin.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { StatsComponent } from './stats/stats.component';
     HomeComponent,
     RegisterComponent,
     StatsComponent,
+    CheckinComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,9 @@ import { StatsComponent } from './stats/stats.component';
     FormsModule,
     RouterModule.forRoot([
       { path: 'register', component: RegisterComponent},
-      {path: 'stats', component: StatsComponent}
+      {path: 'stats', component: StatsComponent},
+      {path: 'checkin', component: CheckinComponent}
+
 
 
     ])
