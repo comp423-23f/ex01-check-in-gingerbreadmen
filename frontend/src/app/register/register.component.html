@@ -6,17 +6,17 @@
     <form (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label>First Name</label>
-            <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" required>
+            <input type="text" id="firstName" name="firstName" [(ngModel)]="userT.firstName" required>
         </div>
         <div class="form-group">
             <label>Last Name</label>
-            <input type="text" id="lastName" name="lastName" [(ngModel)]="user.lastName" required>
+            <input type="text" id="lastName" name="lastName" [(ngModel)]="userT.lastName" required>
         </div>
         <div class="form-group">
             <label>PID</label>
-            <input type="text" id="pid" name="pid" [(ngModel)]="user.pid" required>
+            <input type="text" id="pid" name="pid" [(ngModel)]="userT.pid" required>
         </div>
-        <button type="submit">Register</button>
+        <button value="reset" type="submit">Register</button>
     </form>
     <div class="thank you message" *ngIf="showThankYouMessage">
         Thank you for registering, {{firstNameMessage}}!
