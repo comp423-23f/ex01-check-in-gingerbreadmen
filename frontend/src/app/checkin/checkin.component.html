@@ -6,11 +6,12 @@
     <form (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label>Enter PID</label>
-            <input type="text" id="pidCheck" name="pidCheck" [(ngModel)]="pidCheck" required>
+            <label></label>
+            <input type="text" id="pidCheck" name="pidCheck" [(ngModel)]="checkT.pidCheck" required>
         </div>
         <button value="reset" type="submit">Submit</button>
     </form>
-    <div color='red' class="error message" *ngIf="badPID">
+    <div color='red' class="error message" *ngIf="checkT.badPID">
         Error, Bad PID.
     </div>
     <div color="red" class="message">

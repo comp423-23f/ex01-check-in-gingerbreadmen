@@ -12,7 +12,7 @@ export class UserService {
   }
 
   getUsers(){
-    return this.users;
+    return this.users.sort((a, b) => a.firstName.localeCompare(b.firstName));
   }
   constructor() { }
 
@@ -27,5 +27,12 @@ export class UserService {
     return "A student matching the PID could not be found";
   }
     
+  getUserFromID(enteredPid: String){
+    for(let i in this.users){
+      if(this.users[i].pid === enteredPid){
+        return this.users[i];
+      }
+    }
+  }
 
 }

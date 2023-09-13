@@ -10,6 +10,9 @@ import { RouterModule } from '@angular/router';
 import { FormsModule} from '@angular/forms';
 import { StatsComponent } from './stats/stats.component';
 import { CheckinComponent } from './checkin/checkin.component';
+import { StudentComponent } from './student/student.component';
+import { AmbassadorComponent } from './ambassador/ambassador.component';
+import { ManagerComponent } from './manager/manager.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { CheckinComponent } from './checkin/checkin.component';
     RegisterComponent,
     StatsComponent,
     CheckinComponent,
+    StudentComponent,
+    AmbassadorComponent,
+    ManagerComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +31,10 @@ import { CheckinComponent } from './checkin/checkin.component';
     ReactiveFormsModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: 'register', component: RegisterComponent},
+      {path: 'student', component: StudentComponent},
+      {path: 'ambassador', component: AmbassadorComponent},
+      {path: 'manager', component: ManagerComponent},
+      {path: 'register', component: RegisterComponent},
       {path: 'stats', component: StatsComponent},
       {path: 'checkin', component: CheckinComponent}
 
