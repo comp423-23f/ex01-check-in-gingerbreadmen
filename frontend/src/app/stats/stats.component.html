@@ -1,12 +1,12 @@
 <div class="stats-container">
-    <h2>Registered Users</h2>
+    <h2>Registered Users (Alphabetical) </h2>
     <ul>
       <li *ngFor="let user of users">
         First Name: {{ user.firstName }} Last Name: {{ user.lastName }} PID: {{ user.pid }}
       </li>
     </ul>
 
-    <h2>Checked-In Users</h2>
+    <h2>Checked-In Users (Ordered by Time of Check-In) </h2>
     <ul>
       <li *ngFor="let record of checkedin">
         Name: {{ record.name}} PID: {{ record.userID }} Date: {{record.dateTime}}
