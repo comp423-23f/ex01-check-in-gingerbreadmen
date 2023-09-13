@@ -28,10 +28,11 @@ export class CheckinComponent {
     else{
       this.checkT.badPID = false;
       this.checkT.message = this.userService.getUserFromPid(this.checkT.pidCheck);
+      this.checkinService.checkIn(this.checkT.pidCheck);
       if(this.checkT.message !== "A student matching the PID could not be found"){
         this.checkT.pidCheck = '';
       }
-      this.checkinService.checkIn(this.checkT.pidCheck);
+      
       
     }
 
